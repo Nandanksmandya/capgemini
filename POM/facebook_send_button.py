@@ -36,8 +36,6 @@ class FbSendButton:
         self.driver.find_element(*locator).click()
 
     def verify_send_button(self):
-        # locator = self.lo["send_msgg"]
-        # self.driver.find_element(*locator)
         try:
             locator1 = self.lo["send_button"]
             send_button = self.driver.find_element(*locator1)

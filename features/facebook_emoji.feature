@@ -10,7 +10,7 @@ Feature: change_emoji
       |   emoji |
       |1        |
       |5        |
-      |9        |
+      |-9        |
 
 
 
