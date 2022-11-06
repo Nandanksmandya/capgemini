@@ -1,4 +1,6 @@
 import xlrd
+from Tools.scripts.var_access_benchmark import C
+
 from Library.configure import Configuration
 
 
@@ -6,7 +8,7 @@ class ReadExcel:
     def chage_theme_locators(self):
         path = Configuration.LOCATORS_PATH
         wb = xlrd.open_workbook(path)
-        ws = wb.sheet_by_name("locators_details")
+        ws = wb.sheet_by_name(Configuration.SHEETNAME_LOCATORS)
         rows = ws.get_rows()
         header = next(rows)
         data = {}
@@ -17,7 +19,7 @@ class ReadExcel:
     def login_details(self):
         path = Configuration.LOCATORS_PATH
         wb = xlrd.open_workbook(path)
-        ws = wb.sheet_by_name("login_")
+        ws = wb.sheet_by_name(Configuration.SHEETNAME_DATA)
         rows = ws.get_rows()
         header = next(rows)
         l_ = []
@@ -29,7 +31,7 @@ class ReadExcel:
     def mute_login_details(self):
         path = Configuration.LOCATORS_PATH
         wb = xlrd.open_workbook(path)
-        ws = wb.sheet_by_name("mute_data")
+        ws = wb.sheet_by_name(Configuration.MUTE_LOGIN_DATA)
         rows = ws.get_rows()
         header = next(rows)
         l_ = []
@@ -41,9 +43,9 @@ class ReadExcel:
 
 # //div[text()='Doctor Strange']/..
 
-r = ReadExcel()
-data = r.login_details()
-print(data)
+# r = ReadExcel()
+# data = r.mute_login_details()
+# print(data)
 # loc_name, loc_value = data["select_theme"]
 #
 # print(loc_value.format("Doctor strange"))

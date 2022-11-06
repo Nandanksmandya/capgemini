@@ -15,6 +15,8 @@ class Configuration:
 
     SCREENSHOT_PATH = r"../Screenshots//"
 
-    SHEETNAME_DATA = "Sheet1"
+    SHEETNAME_DATA = "login_"
 
-    SHEETNAME_LOCATORS = "Sheet1"
+    SHEETNAME_LOCATORS = "locators_details"
+
+    MUTE_LOGIN_DATA = "mute_data"
